@@ -13,7 +13,9 @@ jobs:
 
   current_date_job:
     runs-on: ubuntu-20.04
-      steps:
-        - name: Now it is
-          run: |
-            date
+    steps:
+      - name: Now it is
+        run: |
+          date
+
+          # # Definition of jobs starts here

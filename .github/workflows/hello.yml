@@ -10,19 +10,25 @@ jobs:
       - name: Say hello
         run: |
           echo "Hello world!"
-
-  current_date_job:
-    runs-on: ubuntu-20.04
-    steps:
       - name: Now it is
         run: |
           date
-
-          # # Definition of jobs starts here
-
-  directory_content_job:
-    runs-on: ubuntu-20.04
-    steps:
       - name: Directory content
         run: |
           ls -l
+          
+  # current_date_job:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - name: Now it is
+  #       run: |
+  #         date
+
+  #         # # Definition of jobs starts here
+
+  # directory_content_job:
+  #   runs-on: ubuntu-20.04
+  #   steps:
+  #     - name: Directory content
+  #       run: |
+  #         ls -l

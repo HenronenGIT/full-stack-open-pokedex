@@ -19,3 +19,10 @@ jobs:
           date
 
           # # Definition of jobs starts here
+
+  directory_content_job:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Directory content
+        run: |
+          ls -l

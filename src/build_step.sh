@@ -1,4 +1,3 @@
-npm install
 export NODE_OPTIONS=--openssl-legacy-provider
+npm install
 npm run build
-npm run start-prod

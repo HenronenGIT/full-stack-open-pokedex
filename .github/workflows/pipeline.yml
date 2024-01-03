@@ -21,7 +21,7 @@ jobs:
       - name: Check style
         run: npm run eslint
       - name: build
-        run: npm run buil
+        run: npm run build
       - name: test
         run: npm run test
       - name: e2e tests
@@ -68,7 +68,7 @@ jobs:
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
       - name: Test Cancelled
         uses: rjstone/discord-webhook-notify@v1
-        
+
         if: cancelled()
         with:
           severity: warn

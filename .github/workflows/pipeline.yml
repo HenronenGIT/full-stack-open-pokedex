@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master
-  # pull_request:
-  #   branches: [master]
-  #   types: [opened, synchronize]
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize]
 
 jobs:
   simple_deployment_pipeline:
@@ -30,5 +30,7 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5001
+          
+        if: ${{ github.event_name == 'push' }}
       - name: Trigger deployment to Render
         run: curl https://api.render.com/deploy/srv-${{secrets.RENDER_SERVICE_ID}}?key=${{ secrets.RENDER_API_KEY}}

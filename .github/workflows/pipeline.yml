@@ -66,3 +66,11 @@ jobs:
           severity: error
           details: Pipeline failed
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Test Cancelled
+        uses: rjstone/discord-webhook-notify@v1
+        
+        if: cancelled()
+        with:
+          severity: warn
+          details: Test Cancelled!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}

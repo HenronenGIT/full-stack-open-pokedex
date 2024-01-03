@@ -49,7 +49,6 @@ jobs:
           DEFAULT_BUMP: patch
 
   discord_notification:
-    needs: [simple_deployment_pipeline]
     runs-on: ubuntu-20.04
     steps:
       - name: Pipeline suceed

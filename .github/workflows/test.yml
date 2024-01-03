@@ -27,5 +27,5 @@ jobs:
         run: echo "${{ github.event.message.commits }}"
 
       - name: testing if message
-        run: echo ${{join('$COMMIT_MESSAGES', )}}
+        run: echo ${{join('$COMMIT_MESSAGES')}}
         # run: echo "found skip"

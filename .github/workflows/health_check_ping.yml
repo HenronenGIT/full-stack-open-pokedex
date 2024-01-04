@@ -1,6 +1,7 @@
 on:
   schedule:
-    - cron: "0 8 * * *"
+    # - cron: "0 8 * * *"
+    - cron: "1 * * * *"
 
 jobs:
   health-check:
